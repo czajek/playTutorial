@@ -1,0 +1,15 @@
+@(message: String, userForm: Form[(String, String)])
+
+@import helper._
+
+<html>
+    <head>
+    </head>
+    <body>
+        @form(action = routes.UserController.add) {
+                @inputText(userForm("userName"))
+                @inputText(userForm("password"))  
+                <input type="submit" value="Create" >
+        }
+    </body>
+</html>
